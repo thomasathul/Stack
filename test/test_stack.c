@@ -5,6 +5,7 @@ void setUp() {}
 /* Required by the unity test framework */
 void tearDown() {}
 
+/*Unit test for creating stack*/
 void test_create_stack(void)
 {
     stack_t my_stack;
@@ -18,6 +19,9 @@ void test_create_stack(void)
 
     free(my_stack1);
 }
+
+/*Unit test for deleting stack*/
+
 void test_delete_stack(void)
 {
     stack_t my_stack;
@@ -29,6 +33,9 @@ void test_delete_stack(void)
 
     free(my_stack1);
 }
+
+/*Unit test for pushing element in stack*/
+
 void test_push(void)
 {
     stack_t my_stack;
@@ -39,6 +46,8 @@ void test_push(void)
     TEST_ASSERT_EQUAL(SUCCESS, push(my_stack1, 5));
     free(my_stack1);
 }
+
+/*Unit test for popping an element*/
 
 void test_pop(void)
 {
@@ -52,6 +61,8 @@ void test_pop(void)
     free(my_stack1);
     TEST_ASSERT_EQUAL(NULL_PTR, pop(NULL));
 }
+
+/*Unit test for peeking the top element*/
 
 void test_peek(void)
 {
